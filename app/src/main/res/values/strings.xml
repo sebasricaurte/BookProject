@@ -30,5 +30,10 @@
     <string name="sign_out">Cerrar sesión</string>
     <string name="example_title">El Siconalista</string>
     <string name="example_author">Jhon Katzenbach</string>
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="title_list">Libros</string>
+    <string name="title_new">Agregar</string>
+    <string name="title_update">Actualizar</string>
+    <string name="title_delete">Borrar</string>
 
 </resources>

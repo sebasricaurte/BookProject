@@ -1,6 +1,5 @@
 package com.ricaurte.bookproject.ui.main
 
-import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ricaurte.bookproject.ui.login.LoginActivity
 import com.ricaurte.bookproject.R
 import com.ricaurte.bookproject.databinding.ActivityMainBinding
-import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -102,7 +100,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_overflow, menu)
+        menuInflater.inflate(R.menu.overflow_menu, menu)
         return true
     }
 
