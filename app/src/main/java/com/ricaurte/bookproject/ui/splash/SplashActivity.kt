@@ -1,9 +1,10 @@
-package com.ricaurte.bookproject
+package com.ricaurte.bookproject.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.ricaurte.bookproject.databinding.ActivitySplashBinding
+import com.ricaurte.bookproject.ui.login.LoginActivity
 import java.util.*
 import kotlin.concurrent.timerTask
 

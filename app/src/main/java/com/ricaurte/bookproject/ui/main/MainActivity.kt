@@ -1,4 +1,4 @@
-package com.ricaurte.bookproject
+package com.ricaurte.bookproject.ui.main
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -8,6 +8,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.ricaurte.bookproject.ui.login.LoginActivity
+import com.ricaurte.bookproject.R
 import com.ricaurte.bookproject.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(mainBinding.root)
-
+/*
         val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, day0fMOnth ->
             cal.set(Calendar.YEAR, year)
             cal.set(Calendar.MONTH, month)
@@ -96,7 +98,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-        }
+        }*/
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -118,33 +120,4 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.d("state","onStart")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("state","onResume")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("state","onPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d("state","onStop")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("state","onDestroy")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d("state","onRestart")
-    }
 }

@@ -1,10 +1,11 @@
-package com.ricaurte.bookproject
+package com.ricaurte.bookproject.ui.register
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.ricaurte.bookproject.databinding.ActivityRegisterBinding
+import com.ricaurte.bookproject.ui.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var registerBinding: ActivityRegisterBinding

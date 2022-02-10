@@ -1,10 +1,12 @@
-package com.ricaurte.bookproject
+package com.ricaurte.bookproject.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.ricaurte.bookproject.ui.register.RegisterActivity
 import com.ricaurte.bookproject.databinding.ActivityLoginBinding
+import com.ricaurte.bookproject.ui.main.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
