@@ -12,9 +12,18 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
-            android:name=".ui.bottom.BottomActivity"
+            android:name=".ui.tabs.TabsActivity"
             android:exported="true"
-            android:label="@string/title_activity_bottom" >
+            android:label="@string/title_activity_tabs"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.drawer.DrawerActivity"
+            android:exported="true"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.bottom.BottomActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,11 +39,10 @@
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.Splash"></activity>
+            android:theme="@style/AppTheme.Splash" />
         <activity
             android:name=".ui.main.MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

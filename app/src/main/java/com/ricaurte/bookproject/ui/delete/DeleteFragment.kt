@@ -7,26 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ricaurte.bookproject.R
+import com.ricaurte.bookproject.databinding.FragmentDeleteBinding
 
 class DeleteFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = DeleteFragment()
-    }
-
-    private lateinit var viewModel: DeleteViewModel
+    private lateinit var deleteBinding: FragmentDeleteBinding
+    private lateinit var deleteViewModel: DeleteViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_delete, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DeleteViewModel::class.java)
-        // TODO: Use the ViewModel
+    ): View {
+        deleteBinding = FragmentDeleteBinding.inflate(inflater, container, false)
+        deleteViewModel = ViewModelProvider(this)[DeleteViewModel::class.java]
+        return deleteBinding.root
     }
 
 }
