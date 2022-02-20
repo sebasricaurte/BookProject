@@ -9,7 +9,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ricaurte.bookproject.databinding.FragmentListBinding
-import com.ricaurte.bookproject.model.Book
+import com.ricaurte.bookproject.local.Book
+import java.sql.Types.NULL
+
 
 class ListFragment : Fragment() {
 
@@ -30,41 +32,11 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        booksList.add(
-            Book(
-                "EL sicoanalista",
-                "John KAtzenbach",
-                280,
-                "hola Doctor",
-                "Suspenso",
-                5,
-                "10-ene-2000"
-            )
-        )
+        listViewModel.loadBooksDone.observe(viewLifecycleOwner) { result ->
+            onLoadBooksDoneSubscribe(result)
+        }
 
-        booksList.add(
-            Book(
-                "La chica del tren",
-                "Paula Hawkins",
-                280,
-                "Una chica en el tren",
-                "Suspenso",
-                4,
-                "01-feb-2018"
-            )
-        )
-
-        booksList.add(
-            Book(
-                "el principito",
-                "Antoine Exupery",
-                150,
-                "Erase una vez un principito",
-                "Fantasia",
-                3,
-                "01-feb-1980"
-            )
-        )
+        listViewModel.loadBooks()
 
         booksAdapter = BooksAdapter(booksList)
 
@@ -77,6 +49,11 @@ class ListFragment : Fragment() {
         listBinding.newButton.setOnClickListener {
             findNavController().navigate(ListFragmentDirections.actionListFragmentToNewBookFragment())
         }
+    }
+
+    private fun onLoadBooksDoneSubscribe(booksListLoaded: ArrayList<Book>) {
+        booksList = booksListLoaded
+        booksAdapter.appendItems(booksList)
     }
 
 }
